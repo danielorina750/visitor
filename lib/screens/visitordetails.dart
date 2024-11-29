@@ -99,6 +99,13 @@ class _VisitorDetailsPageState extends State<VisitorDetailsPage> {
                 child: Text('Clear Signature'),
               ),
               const SizedBox(height: 20),
+              // Camera Button - moved below signature
+              ElevatedButton(
+                onPressed: _takePhoto,
+                style: ElevatedButton.styleFrom(backgroundColor: Colors.indigo[900], foregroundColor: Colors.white),
+                child: Text(_imageFile == null ? 'Take a Photo' : 'Photo: ${_imageFile!.name}'),
+              ),
+              const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
                   // Handle form submission

@@ -17,15 +17,17 @@ class OptionPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            // Title text
             Text(
               'Choose your option',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 28, // Slightly larger font size for emphasis
                 fontWeight: FontWeight.bold,
                 color: Colors.indigo[900], // Navy Blue
               ),
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 40), // Adjust spacing between text and buttons
+            // Contractor Details button
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -37,9 +39,13 @@ class OptionPage extends StatelessWidget {
                 backgroundColor: Colors.indigo[900], // Button background color
                 foregroundColor: Colors.white, // Text color
               ),
-              child: const Text('Contractor Details'),
+              child: const Text(
+                'Contractor Details',
+                style: TextStyle(fontSize: 18), // Text size inside button
+              ),
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 20), // Spacing between buttons
+            // Visitor Details button
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -51,7 +57,10 @@ class OptionPage extends StatelessWidget {
                 backgroundColor: Colors.indigo[900], // Button background color
                 foregroundColor: Colors.white, // Text color
               ),
-              child: const Text('Visitor Details'),
+              child: const Text(
+                'Visitor Details',
+                style: TextStyle(fontSize: 18), // Text size inside button
+              ),
             ),
           ],
         ),
