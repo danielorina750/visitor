@@ -1,7 +1,6 @@
-// lib/screens/optionpage.dart
 import 'package:flutter/material.dart';
-import 'contractordetails.dart';  // Import the ContractorDetailsPage
-import 'visitordetails.dart';    // Import the VisitorDetailsPage
+import 'package:flutter_app/screens/contractordetails.dart'; // Import Contractor Details Page
+import 'package:flutter_app/screens/visitordetails.dart'; // Import Visitor Details Page
 
 class OptionPage extends StatelessWidget {
   const OptionPage({super.key});
@@ -10,34 +9,49 @@ class OptionPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Option Page'),
+        title: const Text('Select Option'),
+        backgroundColor: Colors.indigo[900], // Navy Blue theme
       ),
-      body: Center(
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Contractor Details Button
+            Text(
+              'Choose your option',
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+                color: Colors.indigo[900], // Navy Blue
+              ),
+            ),
+            const SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
-                // Navigate to the ContractorDetailsPage
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const ContractorDetailsPage()),
+                  MaterialPageRoute(builder: (context) => ContractorDetailsPage()),
                 );
               },
-              child: const Text('Go to Contractor Details'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.indigo[900], // Button background color
+                foregroundColor: Colors.white, // Text color
+              ),
+              child: const Text('Contractor Details'),
             ),
             const SizedBox(height: 20),
-            // Visitor Details Button
             ElevatedButton(
               onPressed: () {
-                // Navigate to the VisitorDetailsPage
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const VisitorDetailsPage()),
+                  MaterialPageRoute(builder: (context) => VisitorDetailsPage()),
                 );
               },
-              child: const Text('Go to Visitor Details'),
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.indigo[900], // Button background color
+                foregroundColor: Colors.white, // Text color
+              ),
+              child: const Text('Visitor Details'),
             ),
           ],
         ),

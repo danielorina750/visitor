@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'screens/landingpage.dart'; // Import the landing page
+import 'package:flutter_app/screens/landingpage.dart'; // Import Landing Page
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -11,11 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Landing Page App',
+      title: 'Flutter App',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.indigo,
       ),
-      // Set LandingPage as the home page
       home: const LandingPage(),
     );
   }

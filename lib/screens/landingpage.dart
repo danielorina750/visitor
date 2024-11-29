@@ -17,10 +17,10 @@ class _LandingPageState extends State<LandingPage> {
   void initState() {
     super.initState();
     // Delay the transition to the OptionPage after 5 seconds
-    Timer(const Duration(seconds: 5), () {
+    Timer(const Duration(seconds: 15), () {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => const OptionPage()), // Go to the OptionPage
+        MaterialPageRoute(builder: (context) => OptionPage()), // Go to the OptionPage
       );
     });
   }
@@ -33,7 +33,7 @@ class _LandingPageState extends State<LandingPage> {
           // Background Image
           Positioned.fill(
             child: Image.asset(
-              'asset//bgsecurityedit.png', // Add your image path here
+              'asset/bgsecurityedit.png', // Add your image path here
               fit: BoxFit.cover,
             ),
           ),
@@ -43,7 +43,7 @@ class _LandingPageState extends State<LandingPage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Text(
-                  'Welcome to Our App',
+                  'Welcome',
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.bold,
@@ -59,7 +59,7 @@ class _LandingPageState extends State<LandingPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(20),
                     child: Image.asset(
-                      'asset/capture.png', // Add your logo path here
+                      'asset/ecologo.png', // Add your logo path here
                       height: 100, // Adjust logo size
                     ),
                   ),
