@@ -25,6 +25,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git pull origin main --rebase
           git add .
           git commit -m "🕒 Daily auto-commit: $(date)" || echo "Nothing to commit"
           git push https://x-access-token:${TOKEN}@github.com/${{ github.repository }} HEAD:main
